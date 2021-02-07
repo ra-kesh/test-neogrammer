@@ -1,5 +1,4 @@
 import fetch from 'isomorphic-fetch';
-import project from '../../backend/models/project';
 import { API } from '../config';
 import queryString from 'query-string';
 import { isAuth , handleResponse } from './auth';
