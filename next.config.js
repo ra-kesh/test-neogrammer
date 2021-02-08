@@ -8,7 +8,7 @@ module.exports = withCSS ({
         API_PRODUCTION : 'https://protected-thicket-88416.herokuapp.com/api',
         PRODUCTION : true ,
         DISQUS_SHORTNAME : 'neogrammer',
-        DOMAIN_PRODUCTION : 'https://test-neogrammer-a5ah3wf90.vercel.app/',
+        DOMAIN_PRODUCTION : 'https://test-neogrammer-p03e23wy4.vercel.app/',
         DOMAIN_DEVELOPMENT : 'http://localhost:3000'
 
     }
