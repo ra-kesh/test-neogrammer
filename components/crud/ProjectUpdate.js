@@ -35,10 +35,10 @@ const ProjectUpdate = ({ router }) => {
     const token = getCookie('token');
 
     useEffect(() => {
-        setValues({ ...values, formData: new FormData() });
         initProject();
         initCategories();
         initTags();
+        setValues({ ...values, formData: new FormData() });
     }, [router]);
 
     const initProject = () => {
@@ -56,17 +56,17 @@ const ProjectUpdate = ({ router }) => {
         }
     };
 
-    const setCategoriesArray = blogCategories => {
+    const setCategoriesArray = projectCategories => {
         let ca = [];
-        blogCategories.map((c, i) => {
+        projectCategories.map((c, i) => {
             ca.push(c._id);
         });
         setChecked(ca);
     };
 
-    const setTagsArray = blogTags => {
+    const setTagsArray = projectTags => {
         let ta = [];
-        blogTags.map((t, i) => {
+        projectTags.map((t, i) => {
             ta.push(t._id);
         });
         setCheckedTag(ta);
