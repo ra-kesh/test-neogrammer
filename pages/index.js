@@ -1,11 +1,10 @@
 import Layout from '../components/Layout';
-import Link from 'next/link';
-import "nprogress/nprogress.css";
+import Home from '../components/Home';
 
 const Index = () => {
     return (
         <Layout>
-            <h2>Index page</h2>
+            <Home/>
         </Layout>
     );
 };

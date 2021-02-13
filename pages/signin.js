@@ -3,6 +3,8 @@ import { withRouter } from 'next/router';
 import SigninComponent from '../components/auth/SigninComponent';
 import Link from 'next/link';
 
+
+
 const Signin = ({ router }) => {
     const showRedirectMessage = () => {
         if (router.query.message) {
@@ -13,21 +15,35 @@ const Signin = ({ router }) => {
     };
     return (
         <Layout>
+            
+
             <div className="container-fluid">
-                <h2 className="text-center pt-4 pb-4">Signin kdshuhurhu</h2>
-
                 <div className="row">
-                    <div className="col-md-6 offset-md-3">{showRedirectMessage()}</div>
+                    <div className="col-md-6 ">{showRedirectMessage()}</div>
                 </div>
-
-                <div className="row">
-                    <div className="col-md-6 offset-md-3">
+               
+                
+                <div className="row login-modals">
+                    <div className="col-lg-5 login-modal">
                         <SigninComponent />
+                        <div className="link-signup">
+                            <Link href='/signup' >
+                            <h6>don't have an account ? SignUp Here</h6>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="col-lg-5 login-modal">
+                       <h1 className="login-desc">Namaste , NeoGrammer :)</h1>
                     </div>
                 </div>
+              
+                  
             </div>
         </Layout>
-    );
+        
+    )
 };
 
 export default withRouter(Signin);
+
+

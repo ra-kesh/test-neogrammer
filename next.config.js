@@ -1,7 +1,7 @@
-const withCSS = require('@zeit/next-css');
+// const withCSS = require('@zeit/next-css');
 
 
-module.exports = withCSS ({
+module.exports =  ({
     publicRuntimeConfig:{
         APP_NAME : 'NeoGrammers',
         API_DEVELOPMENT : 'http://localhost:8000/api',
