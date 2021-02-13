@@ -1,42 +1,50 @@
 import Layout from '../../components/Layout';
 import Admin from '../../components/auth/Admin';
 import Link from 'next/link';
+import { isAuth } from '../../actions/auth';
 
 const AdminIndex = () => {
     return (
         <Layout>
             <Admin>
             <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-md-12 pt-5 pb-5">
-                            <h2>Admin Dashboard</h2>
+                    <div className="row">                 
+                        <div className="col-lg-12 div-dashboard">
+                             {isAuth() && isAuth().role === 1 && (
+                                 <>
+                            <h2>{`welcome to your dashboard , ${isAuth().name}`}</h2>
+                            <h4 className="mt-5 mb-5">choose whatever you want to do..</h4>
+                            </>
+                            )}
+                           
                         </div>
-                        <div className="col-md-4">
-                            <ul class="list-group">
-                                <li className="list-group-item">
-                                    <Link href="/admin/crud/category-tag">
-                                        <a>Add New Category or Tag</a>
-                                    </Link>
-                                </li>
-                                <li className="list-group-item">
-                                    <a href="/admin/crud/project">
-                                        Add New Projects
-                                    </a>
-                                </li>
-                                <li className="list-group-item">
-                                    <a href="/admin/crud/projects">
-                                        Update/Delete Projects
-                                    </a>
-                                </li>
-                                <li className="list-group-item">
-                                    <Link href="/user/update">
-                                        <a>Update Profile</a>
-                                    </Link>
-                                </li>
+                        <div className="col-lg-12 mt-5">
+                            <ul class="list-group-card">
+                               <a href="/admin/crud/project">
+                                    <li className="list-card">
+                                            Add New Projects
+                                    </li>
+                                </a>
+                                <Link href="/admin/crud/projects">
+                                    <li className="list-card">   
+                                       Manage All the Projects
+                                    </li>
+                                </Link>
+                                <Link href="/admin/crud/category-tag">
+                                    <li className="list-card">
+                                        <a>Manage Categories and Tags</a>
+                                   </li>
+                                </Link> 
+                               
+                                <Link href="/user/update">
+                                    <li className="list-card">
+                                        <a>Manage Your Profile</a>
+                                    </li>
+                                </Link>
+                                
                             </ul>
                            
                         </div>
-                        <div className="col-md-8">right</div>
                     </div>
                 </div>
             </Admin>
