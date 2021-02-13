@@ -74,6 +74,41 @@ const Projects = ({projects, categories, tags, totalProjects, projectsLimit, pro
     return (
         <Layout>
             <main>
+                <div className="container-fluid ">
+                    <header>
+                        <div className=" div-project-header">
+                            <h1 className="display-4 font-weight-bold text-center">Projects by NeoGrammers</h1>
+                        </div>
+                        <div className=" div-pro-cat-tag">
+
+                            <div className="pro-cat mb-5">
+                                <h4>browse by categories :-</h4>
+                                 {showAllCategories()}
+                            </div>
+
+                            <div className="pro-tag-title mb-5">
+                                 <h4>browse by tags :-</h4>
+                                {showAllTags()}
+                            </div>
+
+                            <div className="pro-search mb-2">
+                                 <h4 className="mb-3">or simply search here :-</h4>   
+                            </div>
+                            <Search />                    
+                                   
+                        </div>                    
+                    </header>
+                </div>
+                
+            </main>
+                <div className="div-projects-lists ">
+                     <h1>Recently added projects</h1>
+                     <div className="pro-card-container row">{showAllProjects()}</div>
+                    <div className="container-fluid">{showLoadedProjects()}</div>
+                    <div className="text-center pt-5 pb-5">{loadMoreButton()}</div>
+                </div>
+                
+            {/* <main>
                 <div className="container-fluid">
                     <header>
                         <div className="col-md-12 pt-3">
@@ -91,7 +126,7 @@ const Projects = ({projects, categories, tags, totalProjects, projectsLimit, pro
                 <div className="container-fluid row">{showAllProjects()}</div>
                     <div className="container-fluid">{showLoadedProjects()}</div>
                     <div className="text-center pt-5 pb-5">{loadMoreButton()}</div>
-            </main>
+            </main> */}
         </Layout>
     );
 };
