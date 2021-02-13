@@ -9,8 +9,8 @@ const CreateProject = () => {
             <Private>
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-md-12 pt-5 pb-5">
-                            <h2>Add a new Project</h2>
+                        <div className="col-lg-12 div-add-project">
+                            <h2>Add a new interesting Project</h2>
                         </div>
                         <div className="col-md-12">
                             <ProjectCreate />

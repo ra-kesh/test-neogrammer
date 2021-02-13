@@ -1,7 +1,6 @@
 import Layout from '../../../components/Layout';
 import Private from '../../../components/auth/Private';
 import ProjectUpdate from '../../../components/crud/ProjectUpdate';
-import Link from 'next/link';
 
 const Project = () => {
     return (
@@ -9,7 +8,7 @@ const Project = () => {
             <Private>
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-md-12 pt-5 pb-5">
+                        <div className="col-lg-12 div-add-project">
                             <h2>Update blog</h2>
                         </div>
                         <div className="col-md-12">
