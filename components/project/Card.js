@@ -28,16 +28,29 @@ const Card = ({ project }) => {
                     </a>
                 </Link>
             </header> */}
-          
-            
+
             <section>
+                <Link href={`/projects/${project.slug}`}>
+                    <a>
                         <img
                             className="img img-fluid"
-                            style={{ maxHeight: '150px', width: 'auto' }}
+                            style={{ height: '250px', width: '100%' }}
                             src={`${API}/project/photo/${project.slug}`}
                             alt={project.title}
                         />
+                    </a>
+                </Link>
             </section>
+          
+            
+            {/* <section>
+                        <img
+                            className="img img-fluid"
+                            style={{ maxHeight: '250px', width: '100%' }}
+                            src={`${API}/project/photo/${project.slug}`}
+                            alt={project.title}
+                        />
+            </section> */}
             <section>
                 {showProjectCategories(project)}
                
