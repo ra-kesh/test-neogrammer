@@ -55,28 +55,32 @@ const Card = ({ project }) => {
                 {showProjectCategories(project)}
                
             </section>
-            <section>
-                <p className="mark ml-1 pt-2 pb-2">
-                     by  <Link href={`/profile/${project.postedBy.username}`}>
-                                            <a>{project.postedBy.username}</a>
-                                        </Link> | Added {Moment(project.updatedAt).fromNow()}
-                </p>
-            </section>
+           
             <section>
                         <Link href={`/projects/${project.slug}`}>
                         <a>
                             <h2 className="pt-3 pb-3 font-weight-bold">{project.title}</h2>
                         </a>
                         </Link>
+                        by  <Link href={`/profile/${project.postedBy.username}`}>
+                                            <a>{project.postedBy.username}</a>
+                              </Link> 
                         {/* <div className="pb-3">{renderHTML(project.excerpt)}</div>
                         <Link href={`/projects/${project.slug}`}>
                             <a className="btn btn-primary pt-2">Read more</a>
                         </Link> */}
-                        <div>
+                        
+             </section>
+             <section>
+                <div>
 
-                        {showProjectTags(project)}
-                        </div>
-                    </section>
+                {showProjectTags(project)}
+                </div>
+                <p className="float-right">
+                     Added {Moment(project.updatedAt).fromNow()}
+                </p>
+            </section>
+
             {/* <div className="row">
                 <div className="col-md-4">
                     <section>
