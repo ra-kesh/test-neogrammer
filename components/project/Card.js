@@ -28,6 +28,20 @@ const Card = ({ project }) => {
                     </a>
                 </Link>
             </header> */}
+          
+            
+            <section>
+                        <img
+                            className="img img-fluid"
+                            style={{ maxHeight: '150px', width: 'auto' }}
+                            src={`${API}/project/photo/${project.slug}`}
+                            alt={project.title}
+                        />
+            </section>
+            <section>
+                {showProjectCategories(project)}
+               
+            </section>
             <section>
                 <p className="mark ml-1 pt-2 pb-2">
                     Devloped by  <Link href={`/profile/${project.postedBy.username}`}>
@@ -35,15 +49,9 @@ const Card = ({ project }) => {
                                         </Link> | Added {Moment(project.updatedAt).fromNow()}
                 </p>
             </section>
-            <section>
-                {showProjectCategories(project)}
-                <br />
-                <br />
-            </section>
-
             <div className="row">
                 <div className="col-md-4">
-                    <section>
+                    {/* <section>
                         <img
                             className="img img-fluid"
                             style={{ maxHeight: '150px', width: 'auto' }}
@@ -51,7 +59,7 @@ const Card = ({ project }) => {
                             alt={project.title}
                         />
                         
-                    </section>
+                    </section> */}
                 </div>
                 <div className="col-md-8">
                     <section>
