@@ -39,10 +39,10 @@ const Projects = ({projects, categories, tags, totalProjects, projectsLimit, pro
     const showAllProjects = () => {
         return projects.map((project, i) => {
             return (
-                <article key={i}> 
+                <div className="col-lg-2" key={i}> 
                     <Card project= {project} />
                     <hr />
-                </article>
+                </div>
             );
         });
     };
@@ -88,7 +88,7 @@ const Projects = ({projects, categories, tags, totalProjects, projectsLimit, pro
                         </section>
                     </header>
                 </div>
-                <div className="container-fluid">{showAllProjects()}</div>
+                <div className="container-fluid row">{showAllProjects()}</div>
                     <div className="container-fluid">{showLoadedProjects()}</div>
                     <div className="text-center pt-5 pb-5">{loadMoreButton()}</div>
             </main>
