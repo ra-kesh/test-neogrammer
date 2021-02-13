@@ -1,5 +1,4 @@
 
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Router from 'next/router';
 import dynamic from 'next/dynamic';
@@ -26,7 +25,7 @@ const ProjectUpdate = ({ router }) => {
         title: '',
         error: '',
         success: '',
-        formData: '',
+        formData: process.browser && new FormData(),
         title: '',
         body: ''
     });
@@ -39,6 +38,7 @@ const ProjectUpdate = ({ router }) => {
         initCategories();
         initTags();
         setValues({ ...values, formData: new FormData() });
+        
     }, [router]);
 
     const initProject = () => {
@@ -246,18 +246,17 @@ const ProjectUpdate = ({ router }) => {
     };
 
     return (
-        <div className="container-fluid pb-5">
-            <div className="row">
-            <div className="col-md-2">
+        <div className="container-fluid">
+            <div className="row div-create-project">
+            <div className="col-lg-2">
                     <div>
                         <div className="form-group pb-2">
-                            <h5>Featured image</h5>
+                            <h5>Project image</h5>
                             <hr />
 
-                            <small className="text-muted">Max size: 1mb</small>
-                            <br />
+                            <small className="text-muted">Max size: 500kb</small>
                             <label className="btn btn-outline-info">
-                                Upload featured image
+                                change featured image
                                 <input onChange={handleChange('photo')} type="file" accept="image/*" hidden />
                             </label>
                         </div>
@@ -274,7 +273,7 @@ const ProjectUpdate = ({ router }) => {
                         <ul style={{ maxHeight: '200px', overflowY: 'scroll' }}>{showTags()}</ul>
                     </div>
                 </div>
-                <div className="col-md-8">
+                <div className="col-lg-8">
                     {updateProjectForm()}
 
                     <div className="pt-3">
@@ -282,9 +281,9 @@ const ProjectUpdate = ({ router }) => {
                         {showError()}
                     </div>
 
-                    {body && (
+                    {/* {body && (
                         <img src={`${API}/project/photo/${router.query.slug}`} alt={title} style={{ width: '100%' }} />
-                    )}
+                    )} */}
                 </div>
 
             

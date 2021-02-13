@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import Router from 'next/router';
 import dynamic from 'next/dynamic';
 import { withRouter } from 'next/router';
 import { getCookie, isAuth } from '../../actions/auth';
@@ -176,9 +175,9 @@ const CreateProject = ({ router }) => {
 
     const createProjectForm = () => {
         return (
-            <form onSubmit={publishProject}>
+            <form onSubmit={publishProject} >
                 <div className="form-group">
-                    <label className="text-muted">Title</label>
+                    <label className="text-muted">Project Title</label>
                     <input type="text" className="form-control" value={title} onChange={handleChange('title')} />
                 </div>
 
@@ -186,7 +185,10 @@ const CreateProject = ({ router }) => {
                     <ReactQuill 
                      modules={QuillModules}
                      formats={QuillFormats}
-                    value={body} placeholder="Write something amazing..." onChange={handleBody} />
+                    value={body} 
+                    placeholder="Describe your Project However you want.." 
+                    onChange={handleBody} 
+                    />
                 </div>
 
                 <div>
@@ -200,12 +202,12 @@ const CreateProject = ({ router }) => {
 
     return (
         <div className="container-fluid">
-            <div className="row">
+            <div className="row div-create-project">
               
-                <div className="col-md-2">
+                <div className="col-lg-2 ">
                     <div>
                         <div className="form-group pb-2">
-                            <h5>Featured image</h5>
+                            <h5>Project image</h5>
                             <hr />
 
                             <small className="text-muted">Max size: 500kb</small>
@@ -216,18 +218,18 @@ const CreateProject = ({ router }) => {
                         </div>
                     </div>
                     <div>
-                        <h5>Categories</h5>
+                        <h5>Project Categories</h5>
                         <hr />
 
-                        <ul style={{ maxHeight: '200px', overflowY: 'scroll' }}>{showCategories()}</ul>
+                        <ul style={{ maxHeight: '300px', overflowY: 'scroll' }}>{showCategories()}</ul>
                     </div>
                     <div>
-                        <h5>Tags</h5>
+                        <h5>Project Tags</h5>
                         <hr />
-                        <ul style={{ maxHeight: '200px', overflowY: 'scroll' }}>{showTags()}</ul>
+                        <ul style={{ maxHeight: '500px', overflowY: 'scroll' }}>{showTags()}</ul>
                     </div>
                 </div>
-                <div className="col-md-8">
+                <div className="col-lg-8">
                     {createProjectForm()}
                     <div className="pt-3">
                         {showError()}

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import Router from 'next/router';
 import { getCookie, isAuth } from '../../actions/auth';
 import { list, removeProject } from '../../actions/project';
 import moment from 'moment';
@@ -46,13 +45,13 @@ const ProjectDetail = ({username}) => {
         if (isAuth() && isAuth().role === 0) {
             return (
                 <Link href={`/user/crud/${project.slug}`}>
-                    <a className="btn btn-sm btn-warning">Update</a>
+                    <a className="btn btn-small ">Update</a>
                 </Link>
             );
         } else if (isAuth() && isAuth().role === 1) {
             return (
                 <Link href={`/admin/crud/${project.slug}`}>
-                    <a className="ml-2 btn btn-sm btn-warning">Update</a>
+                    <a className="btn btn-small ">Update</a>
                 </Link>
             );
         }
@@ -62,16 +61,23 @@ const ProjectDetail = ({username}) => {
     const showAllProjects = () => {
         return projects.map((project, i) => {
             return (
-                <div key={i} className="pb-5">
+                <>
+                <div key={i} className="row list-manage-project ">
+                    <div className="list-manage-user col-lg-9">
                     <h3>{project.title}</h3>
-                    <p className="mark">
-                        Devloped by {project.postedBy.name} | Added on {moment(project.updatedAt).fromNow()}
-                    </p>
-                    <button className="btn btn-sm btn-danger" onClick={() => deleteConfirm(project.slug)}>
-                        Delete
-                    </button>
-                    {showUpdateButton(project)}
+                        <p className="mark mt-4">
+                            Added {moment(project.updatedAt).fromNow()} by {project.postedBy.name}
+                        </p>
+                    </div>
+                    <div className="list-manage-buttons col-lg-2">
+                        <button className="btn btn-small" onClick={() => deleteConfirm(project.slug)}>
+                            Delete
+                        </button>
+                        {showUpdateButton(project)}
+                    </div>
                 </div>
+                <hr style={{width:"90vw"}}/>
+                </>
             );
         });
     };

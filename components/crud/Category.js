@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Router from 'next/router';
 import { getCookie } from '../../actions/auth';
 import { create, getCategories, removeCategory } from '../../actions/category';
 
@@ -34,14 +32,17 @@ const Category = () => {
     const showCategories = () => {
         return categories.map((c, i) => {
             return (
-                <button
-                    onDoubleClick={() => deleteConfirm(c.slug)}
-                    title="Double click to delete"
-                    key={i}
-                    className="btn btn-outline-primary mr-1 ml-1 mt-3"
-                >
-                    {c.name}
-                </button>
+                <div className="cat-buttons">
+
+                    <button
+                        onDoubleClick={() => deleteConfirm(c.slug)}
+                        title="Double click to delete"
+                        key={i}
+                        className="btn btn-outline-primary mr-1 ml-1 mt-3"
+                    >
+                        {c.name}
+                    </button>
+                </div>
             );
         });
     };
@@ -103,15 +104,15 @@ const Category = () => {
     };
 
     const newCategoryFom = () => (
-        <form onSubmit={clickSubmit}>
-            <div className="form-group">
-                <label className="text-muted">Name</label>
-                <input type="text" className="form-control" onChange={handleChange} value={name} required />
+        <form onSubmit={clickSubmit} >
+            <div className="form-group category-tag-form">
+                <input type="text" className="form-cat-tag" onChange={handleChange} value={name} required  placeholder="Category Name"/>
+                <button type="submit" className="btn btn-primary ml-5">
+                    Add Category
+                </button>
             </div>
             <div>
-                <button type="submit" className="btn btn-primary">
-                    Create
-                </button>
+               
             </div>
         </form>
     );
@@ -121,9 +122,11 @@ const Category = () => {
             {showSuccess()}
             {showError()}
             {showRemoved()}
-            <div onMouseMove={mouseMoveHandler}>
-                {newCategoryFom()}
+            <div onMouseMove={mouseMoveHandler} >
+            {newCategoryFom()}
+               <div className=" cat-tag-box mt-2">
                 {showCategories()}
+               </div>
             </div>
         </React.Fragment>
     );

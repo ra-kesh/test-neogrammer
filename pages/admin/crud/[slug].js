@@ -10,7 +10,7 @@ const Project = () => {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-12 div-add-project">
-                            <h2>Update an existing blog</h2>
+                            <h2>Update an existing project</h2>
                         </div>
                         <div className="col-lg-12">
                             <ProjectUpdate />

@@ -34,6 +34,7 @@ const Tag = () => {
     const showTags = () => {
         return tags.map((t, i) => {
             return (
+                <div className="tag-buttons">
                 <button
                     onDoubleClick={() => deleteConfirm(t.slug)}
                     title="Double click to delete"
@@ -42,6 +43,8 @@ const Tag = () => {
                 >
                     {t.name}
                 </button>
+                </div
+                >
             );
         });
     };
@@ -104,15 +107,14 @@ const Tag = () => {
 
     const newTagFom = () => (
         <form onSubmit={clickSubmit}>
-            <div className="form-group">
-                <label className="text-muted">Name</label>
-                <input type="text" className="form-control" onChange={handleChange} value={name} required />
-            </div>
-            <div>
-                <button type="submit" className="btn btn-primary">
-                    Create
+            <div className="form-group category-tag-form">
+                
+                <input type="text" className="form-cat-tag" onChange={handleChange} value={name} required  placeholder="Tag name"/>
+                <button type="submit" className="btn btn-primary ml-5">
+                    Add tag
                 </button>
             </div>
+           
         </form>
     );
 
@@ -123,7 +125,10 @@ const Tag = () => {
             {showRemoved()}
             <div onMouseMove={mouseMoveHandler}>
                 {newTagFom()}
+                <div className=" cat-tag-box mt-2">
+
                 {showTags()}
+                </div>
             </div>
         </React.Fragment>
     );
