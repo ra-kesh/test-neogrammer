@@ -21,13 +21,13 @@ const Card = ({ project }) => {
     return (
       
    <div className="card pb-4">
-            <header>
+            {/* <header>
                 <Link href={`/projects/${project.slug}`}>
                     <a>
                         <h2 className="pt-3 pb-3 font-weight-bold">{project.title}</h2>
                     </a>
                 </Link>
-            </header>
+            </header> */}
             <section>
                 <p className="mark ml-1 pt-2 pb-2">
                     Devloped by  <Link href={`/profile/${project.postedBy.username}`}>
@@ -42,7 +42,7 @@ const Card = ({ project }) => {
             </section>
 
             <div className="row">
-                <div className="col-md-2">
+                <div className="col-md-4">
                     <section>
                         <img
                             className="img img-fluid"
@@ -53,12 +53,17 @@ const Card = ({ project }) => {
                         
                     </section>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-8">
                     <section>
-                        <div className="pb-3">{renderHTML(project.excerpt)}</div>
+                        <Link href={`/projects/${project.slug}`}>
+                        <a>
+                            <h2 className="pt-3 pb-3 font-weight-bold">{project.title}</h2>
+                        </a>
+                        </Link>
+                        {/* <div className="pb-3">{renderHTML(project.excerpt)}</div>
                         <Link href={`/projects/${project.slug}`}>
                             <a className="btn btn-primary pt-2">Read more</a>
-                        </Link>
+                        </Link> */}
                         <div>
 
                         {showProjectTags(project)}
