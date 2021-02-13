@@ -61,8 +61,7 @@ const Card = ({ project }) => {
                         
                     </section> */}
                 </div>
-                <div className="col-md-8">
-                    <section>
+                <section>
                         <Link href={`/projects/${project.slug}`}>
                         <a>
                             <h2 className="pt-3 pb-3 font-weight-bold">{project.title}</h2>
@@ -77,7 +76,9 @@ const Card = ({ project }) => {
                         {showProjectTags(project)}
                         </div>
                     </section>
-                </div>
+                {/* <div className="col-md-8">
+                   
+                </div> */}
             </div>
         </div>
     
