@@ -73,7 +73,7 @@ const Projects = ({projects, categories, tags, totalProjects, projectsLimit, pro
 
     return (
         <Layout>
-            <main>
+            {/* <main>
                 <div className="container-fluid ">
                     <header>
                         <div className=" div-project-header">
@@ -106,9 +106,9 @@ const Projects = ({projects, categories, tags, totalProjects, projectsLimit, pro
                      <div className="pro-card-container row">{showAllProjects()}</div>
                     <div className="container-fluid">{showLoadedProjects()}</div>
                     <div className="text-center pt-5 pb-5">{loadMoreButton()}</div>
-                </div>
+                </div> */}
                 
-            {/* <main>
+            <main>
                 <div className="container-fluid">
                     <header>
                         <div className="col-md-12 pt-3">
@@ -126,7 +126,7 @@ const Projects = ({projects, categories, tags, totalProjects, projectsLimit, pro
                 <div className="container-fluid row">{showAllProjects()}</div>
                     <div className="container-fluid">{showLoadedProjects()}</div>
                     <div className="text-center pt-5 pb-5">{loadMoreButton()}</div>
-            </main> */}
+            </main>
         </Layout>
     );
 };
