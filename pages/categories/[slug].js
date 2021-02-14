@@ -12,7 +12,7 @@ const Category = ({ category, projects }) => {
         <React.Fragment>
             <Layout>
                 <main>
-                    <div className="container-fluid text-center">
+                    <div className="container-fluid ">
                         <header>
                             <div className="div-project-header">
                                 <h1 className="display-4 font-weight-bold">Projects for {category.name}</h1>
