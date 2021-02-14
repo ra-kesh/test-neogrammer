@@ -111,7 +111,7 @@ const Projects = ({projects, categories, tags, totalProjects, projectsLimit, pro
             <main>
                 <div className="container-fluid">
                     <header>
-                        <div className="col-md-12 pt-3">
+                        <div className=" div-project-header">
                             <h1 className="display-4 font-weight-bold text-center">Projects by NeoGrammers</h1>
                         </div>
                         <section>
