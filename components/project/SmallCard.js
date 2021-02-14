@@ -11,7 +11,7 @@ const SmallCard = ({ project }) => {
                     <a>
                         <img
                             className="img img-fluid"
-                            style={{ height: '250px', width: '100%' }}
+                            style={{ height: '200px', width: '100%' }}
                             src={`${API}/project/photo/${project.slug}`}
                             alt={project.title}
                         />
@@ -23,21 +23,18 @@ const SmallCard = ({ project }) => {
                 <section>
                     <Link href={`/projects/${project.slug}`}>
                         <a>
-                            <h5 className="card-title">{project.title}</h5>
+                            <h4 className="card-title">{project.title}</h4>
                         </a>
                     </Link>
-                    {/* <p className="card-text">{renderHTML(project.excerpt)}</p> */}
                 </section>
             </div>
 
-            {/* <div className="card-body">
-                Posted {moment(project.updatedAt).fromNow()} by{' '}
-                <Link href={`/`}>
-                    <a className="float-right"> <Link href={`/profile/${project.postedBy.username}`}>
+            <div className="card-body">
+                By <h6><Link href={`/profile/${project.postedBy.username}`}>
                                             <a>{project.postedBy.username}</a>
-                                        </Link></a>
-                </Link>
-            </div> */}
+                   </Link></h6> 
+                
+            </div>
         </div>
     );
 };
