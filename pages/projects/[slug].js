@@ -61,7 +61,7 @@ const SingleProject = ({ project , query }) => {
             <Layout>
                 <main>
                     <article>
-                        <div className="container-fluid pro-wrapper">
+                        <div className="container-fluid ">
                             <div className="row">
                             <div className="pro-wrapper">
                                 <div className="col-lg-6">
