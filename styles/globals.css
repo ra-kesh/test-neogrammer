@@ -322,6 +322,11 @@ flex-direction: column;
   }
 
 
+  .pro-wrapper{
+    box-sizing: border-box;
+    margin: auto;
+  }
+
 /* 
 
 
