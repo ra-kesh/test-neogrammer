@@ -16,7 +16,7 @@ const Tag = ({ tag, projects, query }) => {
                 <main>
                     <div className="container-fluid text-center">
                         <header>
-                            <div className="div-project-header">
+                            <div className="div-project-header row">
                                 <h1 className="display-4 font-weight-bold">{tag.name}</h1>
                                 {projects.map((p, i) => (
                                     <div className="col-lg-4 pro-card">
