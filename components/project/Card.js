@@ -20,7 +20,7 @@ const Card = ({ project }) => {
 
     return (
       
-   <div className="card pb-4 p-2">
+   <div className="card pb-4 p-3">
             <section>
                 <Link href={`/projects/${project.slug}`}>
                     <a>
@@ -51,37 +51,15 @@ const Card = ({ project }) => {
                     </div>          
              </section>
              <section>
-                <div>
-
-                {showProjectTags(project)}
-                </div>
-              
+                    {showProjectTags(project)}
             </section>
-            <div>
-            <p className="float-right">
+            <section>
+                <p className="float-right">
                      Added {Moment(project.updatedAt).fromNow()}
                 </p>
-            </div>
-
-            {/* <div className="row">
-                <div className="col-md-4">
-                    <section>
-                        <img
-                            className="img img-fluid"
-                            style={{ maxHeight: '150px', width: 'auto' }}
-                            src={`${API}/project/photo/${project.slug}`}
-                            alt={project.title}
-                        />
-                        
-                    </section>
-                </div>
-               
-                <div className="col-md-8">
-                   
-                </div>
-            </div> */}
+            </section>
         </div>
-    
+       
         
     );
 };
