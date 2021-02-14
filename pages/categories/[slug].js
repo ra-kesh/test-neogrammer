@@ -15,15 +15,20 @@ const Category = ({ category, projects }) => {
                     <div className="container-fluid text-center">
                         <header>
                             <div className="div-project-header">
-                                <h1 className="display-4 font-weight-bold">{category.name}</h1>
-                                {projects.map((project, i) => (
-                                    <div className="col-lg-4 pro-card">
-                                        <Card key={i} project={project} />
-                                        <hr />
-                                    </div>
-                                ))}
+                                <h1 className="display-4 font-weight-bold">Projects for {category.name}</h1>
+                               
                             </div>
                         </header>
+                        <div className="row">
+                            {projects.map((project, i) => {
+                                    return (
+                                        <div className="col-lg-4 pro-card" key={i}> 
+                                            <Card project= {project} />
+                                            <hr />
+                                        </div>
+                                    );
+                                })}
+                        </div>
                     </div>
                 </main>
             </Layout>

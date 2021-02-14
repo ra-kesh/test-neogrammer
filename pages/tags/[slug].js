@@ -17,7 +17,7 @@ const Tag = ({ tag, projects, query }) => {
                     <div className="container-fluid ">
                         <header>
                             <div className="div-project-header">
-                                <h1 className="display-4 font-weight-bold">{tag.name}</h1>
+                                <h1 className="display-4 font-weight-bold">Projects by {tag.name}</h1>
                                
                             </div>
                         </header>
