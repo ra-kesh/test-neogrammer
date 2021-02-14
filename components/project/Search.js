@@ -46,11 +46,11 @@ const Search = () => {
     const searchForm = () => (
         <form onSubmit={searchSubmit}>
             <div className="row">
-                <div className="col-md-8">
+                <div className="col-lg-6">
                     <input type="search" className="form-control" placeholder="Search project" onChange={handleChange} />
                 </div>
 
-                <div className="col-md-4">
+                <div className="col-md-2">
                     <button className="btn btn-block btn-outline-primary" type="submit">
                         Search
                     </button>
@@ -61,7 +61,7 @@ const Search = () => {
 
     return (
         <div className="container-fluid">
-            <div className="pt-3 pb-5">{searchForm()}</div>
+            <div className="pt-3 pb-5 pl-0">{searchForm()}</div>
             {searched && <div style={{ marginTop: '-120px', marginBottom: '-80px' }}>{searchedProjects(results)}</div>}
         </div>
     );

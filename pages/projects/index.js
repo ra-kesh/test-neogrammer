@@ -136,11 +136,15 @@ const Projects = ({projects, categories, tags, totalProjects, projectsLimit, pro
                             </div>                          
                         </section>
                     </header>
-                </div>
-                <div className="container-fluid row">{showAllProjects()}</div>
+                </div>            
+            </main>
+            <div className="div-projects-lists ">
+                     <h1>Recently added projects</h1>
+                     <div className="pro-card-container row">{showAllProjects()}</div>
                     <div className="container-fluid">{showLoadedProjects()}</div>
                     <div className="text-center pt-5 pb-5">{loadMoreButton()}</div>
-            </main>
+            </div>
+            
         </Layout>
     );
 };
