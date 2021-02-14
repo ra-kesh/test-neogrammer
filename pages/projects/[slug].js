@@ -65,7 +65,7 @@ const SingleProject = ({ project , query }) => {
 
 
                             <div className="row">
-                                <div className="col-lg-5">
+                                <div className="col-lg-4">
                                     <div>
                                         <img
                                             src={`${API}/project/photo/${project.slug}`}
@@ -82,11 +82,14 @@ const SingleProject = ({ project , query }) => {
                                        </p>
                                     </div>
                                     <div className="pb-3">
-                                    {showProjectCategories(project)}
-                                    {showProjectTags(project)}
-                                    <br />
-                                    <br />
-                                </div>
+                                        {showProjectCategories(project)}
+                                        {showProjectTags(project)}
+                                        <br />
+                                        <br />
+                                    </div>
+                                    <div className="container pb-5">
+                                     {showComments()}
+                                    </div>
                                 </div>
                                 <div className="col-lg-7">
                                     <section>
