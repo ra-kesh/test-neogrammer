@@ -4,6 +4,7 @@ import Layout from '../../components/Layout';
 import { useState } from 'react';
 import { listProjectsWithCategoriesAndTags } from '../../actions/project';
 import Card from '../../components/project/Card';
+import Search from '../../components/project/Search';
 
 const Projects = ({projects, categories, tags, totalProjects, projectsLimit, projectSkip, router }) => {
 
