@@ -309,6 +309,13 @@ flex-direction: column;
       cursor: pointer;
   }
 
+  .pro-tag:hover,
+  .pro-tag:active,
+  .pro-tag:focus{
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+  }
+
 
 
 /* 
