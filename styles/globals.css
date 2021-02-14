@@ -324,7 +324,10 @@ flex-direction: column;
 
   .pro-wrapper{
     box-sizing: border-box;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
 /* 
