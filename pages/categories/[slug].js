@@ -16,9 +16,9 @@ const Category = ({ category, projects }) => {
                         <header>
                             <div className="div-project-header">
                                 <h1 className="display-4 font-weight-bold">{category.name}</h1>
-                                {projects.map((p, i) => (
+                                {projects.map((project, i) => (
                                     <div className="col-lg-4 pro-card">
-                                        <Card key={i} project={p} />
+                                        <Card key={i} project={project} />
                                         <hr />
                                     </div>
                                 ))}

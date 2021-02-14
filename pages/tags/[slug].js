@@ -22,9 +22,9 @@ const Tag = ({ tag, projects, query }) => {
                             </div>
                         </header>
                         <div className="row">
-                        {projects.map((p, i) => (
+                        {projects.map((project, i) => (
                                     <div className="col-lg-4 pro-card">
-                                        <Card key={i} project={p} />
+                                        <Card key={i} project={project} />
                                         <hr />
                                     </div>
                                 ))}
