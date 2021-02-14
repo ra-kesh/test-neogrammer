@@ -16,10 +16,10 @@ const Tag = ({ tag, projects, query }) => {
                 <main>
                     <div className="container-fluid text-center">
                         <header>
-                            <div className="col-md-12 pt-3">
+                            <div className="div-project-header">
                                 <h1 className="display-4 font-weight-bold">{tag.name}</h1>
                                 {projects.map((p, i) => (
-                                    <div>
+                                    <div className="col-lg-4 pro-card">
                                         <Card key={i} project={p} />
                                         <hr />
                                     </div>
