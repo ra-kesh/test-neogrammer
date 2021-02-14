@@ -325,7 +325,7 @@ flex-direction: column;
   .pro-wrapper{
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     
   }
