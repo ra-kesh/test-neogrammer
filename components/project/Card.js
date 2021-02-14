@@ -20,7 +20,7 @@ const Card = ({ project }) => {
 
     return (
       
-   <div className="card pb-4 p-3">
+   <div className="card p-2">
             <section>
                 <Link href={`/projects/${project.slug}`}>
                     <a>
@@ -54,7 +54,7 @@ const Card = ({ project }) => {
                     {showProjectTags(project)}
             </section>
             <section>
-                <p className="float-right">
+                <p className="float-right m-0 mt-2">
                      Added {Moment(project.updatedAt).fromNow()}
                 </p>
             </section>
