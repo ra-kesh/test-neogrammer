@@ -115,11 +115,24 @@ const Projects = ({projects, categories, tags, totalProjects, projectsLimit, pro
                             <h1 className="display-4 font-weight-bold text-center">Projects by NeoGrammers</h1>
                         </div>
                         <section>
-                            <div className="pb-5 text-center">
-                                {showAllCategories()}
-                                <br />
-                                {showAllTags()}
-                            </div>
+                             <div className=" div-pro-cat-tag">
+
+                                <div className="pro-cat mb-5">
+                                    <h4>browse by categories :-</h4>
+                                    {showAllCategories()}
+                                </div>
+
+                                <div className="pro-tag-title mb-5">
+                                    <h4>browse by tags :-</h4>
+                                    {showAllTags()}
+                                </div>
+
+                                <div className="pro-search mb-2">
+                                    <h4 className="mb-3">or simply search here :-</h4>   
+                                </div>
+                                <Search />                    
+                                
+                            </div>                          
                         </section>
                     </header>
                 </div>
