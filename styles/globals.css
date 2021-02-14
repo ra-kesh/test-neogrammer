@@ -316,6 +316,10 @@ flex-direction: column;
     color: var(--primary-blue);
   }
 
+  .pro-desc{
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+  }
 
 
 /* 

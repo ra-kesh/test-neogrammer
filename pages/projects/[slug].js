@@ -91,7 +91,7 @@ const SingleProject = ({ project , query }) => {
                                      {showComments()}
                                     </div>
                                 </div>
-                                <div className="col-lg-7">
+                                <div className="col-lg-7 pro-desc">
                                     <section>
                                       <div className="col-md-12 lead">{renderHTML(project.body)}</div>
                                    </section>
