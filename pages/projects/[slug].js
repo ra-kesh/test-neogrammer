@@ -44,7 +44,7 @@ const SingleProject = ({ project , query }) => {
         return related.map((project, i) => (
             <div className="col-md-4" key={i}>
                 <article>
-                    <SmallCard project={project} />
+                    <Card project={project} />
                 </article>
             </div>
         ));
@@ -115,7 +115,6 @@ SingleProject.getInitialProps = ({ query }) => {
         if (data.error) {
             console.log(data.error);
         } else {
-            // console.log('GET INITIAL PROPS IN SINGLE BLOG', data);
             return { project: data };
         }
     });
