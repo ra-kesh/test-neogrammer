@@ -95,6 +95,12 @@ const SingleProject = ({ project , query }) => {
                                     <section>
                                       <div className="col-md-12 lead">{renderHTML(project.body)}</div>
                                    </section>
+                                   <div className="container">
+                                        <h4 className="text-center pt-5 pb-5 h2">Similar Projects</h4>
+                                        <hr />
+                                        <div className="row">{showRelatedProject()}</div>
+
+                                    </div>
                                 </div>
                             </div>
                             {/* <section> 
@@ -130,16 +136,16 @@ const SingleProject = ({ project , query }) => {
 
                        
                     </article>
-                      <div className="container">
+                      {/* <div className="container">
                             <h4 className="text-center pt-5 pb-5 h2">Similar Projects</h4>
                             <hr />
                             <div className="row">{showRelatedProject()}</div>
 
-                        </div>
+                        </div> */}
 
-                        <div className="container pb-5">
+                        {/* <div className="container pb-5">
                             {showComments()}
-                        </div>
+                        </div> */}
                 </main>
             </Layout>
         </React.Fragment>
