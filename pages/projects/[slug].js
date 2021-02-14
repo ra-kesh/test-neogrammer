@@ -63,46 +63,50 @@ const SingleProject = ({ project , query }) => {
                     <article>
                         <div className="container-fluid pro-wrapper">
                             <div className="row">
+                            <div className="pro-wrapper">
                                 <div className="col-lg-6">
+                                        <div>
+                                            <img
+                                                src={`${API}/project/photo/${project.slug}`}
+                                                alt={project.title}
+                                                className="img img-fluid featured-image"
+                                            />   
+                                        </div>
+                                    
+
+                                        <section>
+                                        <div className="col-md-12 lead pro-desc">{renderHTML(project.body)}</div>
+                                    </section>
+                                    
+                                    </div>
+                                    <div className="col-lg-3 ">
+
                                     <div>
-                                        <img
-                                            src={`${API}/project/photo/${project.slug}`}
-                                            alt={project.title}
-                                            className="img img-fluid featured-image"
-                                        />   
-                                    </div>
-                                   
+                                            <p className="lead mt-3 mark">
+                                            Devloped by
+                                            <Link href={`/profile/${project.postedBy.username}`}>
+                                                <a>{project.postedBy.username}</a>
+                                            </Link>| Added {moment(project.updatedAt).fromNow()}
+                                        </p>
+                                        </div>
+                                        <div className="pb-3">
+                                            {showProjectCategories(project)}
+                                            {showProjectTags(project)}
+                                            <br />
+                                            <br />
+                                        </div>
+                                    
+                                    <div className="container">
+                                            <h4 className="text-center pt-5 pb-5 h2">Similar Projects</h4>
+                                            <hr />
+                                            <div className="row">{showRelatedProject()}</div>
 
-                                    <section>
-                                      <div className="col-md-12 lead pro-desc">{renderHTML(project.body)}</div>
-                                   </section>
-                                   
-                                </div>
-                                <div className="col-lg-3 ">
-
-                                   <div>
-                                        <p className="lead mt-3 mark">
-                                         Devloped by
-                                        <Link href={`/profile/${project.postedBy.username}`}>
-                                            <a>{project.postedBy.username}</a>
-                                        </Link>| Added {moment(project.updatedAt).fromNow()}
-                                       </p>
+                                        </div>
                                     </div>
-                                    <div className="pb-3">
-                                        {showProjectCategories(project)}
-                                        {showProjectTags(project)}
-                                        <br />
-                                        <br />
-                                    </div>
-                                   
-                                   <div className="container">
-                                        <h4 className="text-center pt-5 pb-5 h2">Similar Projects</h4>
-                                        <hr />
-                                        <div className="row">{showRelatedProject()}</div>
-
-                                    </div>
-                                </div>
                             </div>
+
+                            </div>
+                           
                             <div className="container pb-5">
                                      {showComments()}
                             </div>
