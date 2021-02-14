@@ -42,7 +42,7 @@ const SingleProject = ({ project , query }) => {
         ));
     const showRelatedProject = () => {
         return related.map((project, i) => (
-            <div className="col-lg-3" key={i}>
+            <div className="col-lg-12" key={i}>
                 <article>
                     <SmallCard project={project} />
                 </article>
@@ -62,10 +62,8 @@ const SingleProject = ({ project , query }) => {
                 <main>
                     <article>
                         <div className="container-fluid">
-
-
                             <div className="row">
-                                <div className="col-lg-4">
+                                <div className="col-lg-8">
                                     <div>
                                         <img
                                             src={`${API}/project/photo/${project.slug}`}
@@ -87,14 +85,14 @@ const SingleProject = ({ project , query }) => {
                                         <br />
                                         <br />
                                     </div>
-                                    <div className="container pb-5">
-                                     {showComments()}
-                                    </div>
-                                </div>
-                                <div className="col-lg-7 pro-desc">
+
                                     <section>
                                       <div className="col-md-12 lead">{renderHTML(project.body)}</div>
                                    </section>
+                                   
+                                </div>
+                                <div className="col-lg-4 pro-desc">
+                                   
                                    <div className="container">
                                         <h4 className="text-center pt-5 pb-5 h2">Similar Projects</h4>
                                         <hr />
@@ -102,6 +100,9 @@ const SingleProject = ({ project , query }) => {
 
                                     </div>
                                 </div>
+                            </div>
+                            <div className="container pb-5">
+                                     {showComments()}
                             </div>
                             {/* <section> 
                                 <div className="row" style={{ marginTop: '-30px' }}>
