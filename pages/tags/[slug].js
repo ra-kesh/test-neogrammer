@@ -14,18 +14,21 @@ const Tag = ({ tag, projects, query }) => {
         <React.Fragment>
             <Layout>
                 <main>
-                    <div className="container-fluid text-center">
+                    <div className="container-fluid row">
                         <header>
-                            <div className="div-project-header row">
+                            <div className="div-project-header">
                                 <h1 className="display-4 font-weight-bold">{tag.name}</h1>
-                                {projects.map((p, i) => (
+                               
+                            </div>
+                        </header>
+                        <div>
+                        {projects.map((p, i) => (
                                     <div className="col-lg-4 pro-card">
                                         <Card key={i} project={p} />
                                         <hr />
                                     </div>
                                 ))}
-                            </div>
-                        </header>
+                        </div>
                     </div>
                 </main>
             </Layout>
