@@ -87,11 +87,11 @@ const SingleProject = ({ project , query }) => {
                                     </div>
 
                                     <section>
-                                      <div className="col-md-12 lead">{renderHTML(project.body)}</div>
+                                      <div className="col-md-12 lead pro-desc">{renderHTML(project.body)}</div>
                                    </section>
                                    
                                 </div>
-                                <div className="col-lg-4 pro-desc">
+                                <div className="col-lg-4 ">
                                    
                                    <div className="container">
                                         <h4 className="text-center pt-5 pb-5 h2">Similar Projects</h4>
