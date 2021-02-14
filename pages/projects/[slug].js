@@ -6,7 +6,7 @@ import { singleProject , listRelated } from '../../actions/project';
 import { API, DOMAIN, APP_NAME, FB_APP_ID } from '../../config';
 import renderHTML from 'react-render-html';
 import moment from 'moment';
-import Card from '../../components/project/Card';
+import SmallCard from '../../components/project/SmallCard';
 import DisqusThread from '../../components/DisqusThread';
 
 const SingleProject = ({ project , query }) => {
@@ -44,7 +44,7 @@ const SingleProject = ({ project , query }) => {
         return related.map((project, i) => (
             <div className="col-md-4" key={i}>
                 <article>
-                    <Card project={project} />
+                    <SmallCard project={project} />
                 </article>
             </div>
         ));
@@ -115,6 +115,7 @@ SingleProject.getInitialProps = ({ query }) => {
         if (data.error) {
             console.log(data.error);
         } else {
+           
             return { project: data };
         }
     });
