@@ -38,6 +38,9 @@ a:hover{
 .mark {
   background-color: var(--secondary-white);
   border-radius: 5px;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+      Bitstream Vera Sans Mono, Courier New, monospace;
+      cursor: pointer;
 }
 
 /* signin signup form */
@@ -301,6 +304,9 @@ flex-direction: column;
     border: 1px solid var(--secondary-white);
     padding: 1px 1rem;
     border-radius: 20px;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+      Bitstream Vera Sans Mono, Courier New, monospace;
+      cursor: pointer;
   }
 
 
