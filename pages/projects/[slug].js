@@ -62,8 +62,8 @@ const SingleProject = ({ project , query }) => {
                 <main>
                     <article>
                         <div className="container-fluid ">
-                            <div className="row">
-                            <div className="pro-wrapper">
+                            <div className="row pro-wrapper">
+                           
                                 <div className="col-lg-6">
                                         <div>
                                             <img
@@ -103,7 +103,7 @@ const SingleProject = ({ project , query }) => {
 
                                         </div>
                                     </div>
-                            </div>
+                            
 
                             </div>
                            
