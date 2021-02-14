@@ -61,9 +61,9 @@ const SingleProject = ({ project , query }) => {
             <Layout>
                 <main>
                     <article>
-                        <div className="container-fluid">
+                        <div className="container-fluid m-auto">
                             <div className="row">
-                                <div className="col-lg-8">
+                                <div className="col-lg-6">
                                     <div>
                                         <img
                                             src={`${API}/project/photo/${project.slug}`}
@@ -71,7 +71,16 @@ const SingleProject = ({ project , query }) => {
                                             className="img img-fluid featured-image"
                                         />   
                                     </div>
-                                    <div>
+                                   
+
+                                    <section>
+                                      <div className="col-md-12 lead pro-desc">{renderHTML(project.body)}</div>
+                                   </section>
+                                   
+                                </div>
+                                <div className="col-lg-3 ">
+
+                                   <div>
                                         <p className="lead mt-3 mark">
                                          Devloped by
                                         <Link href={`/profile/${project.postedBy.username}`}>
@@ -85,13 +94,6 @@ const SingleProject = ({ project , query }) => {
                                         <br />
                                         <br />
                                     </div>
-
-                                    <section>
-                                      <div className="col-md-12 lead pro-desc">{renderHTML(project.body)}</div>
-                                   </section>
-                                   
-                                </div>
-                                <div className="col-lg-4 ">
                                    
                                    <div className="container">
                                         <h4 className="text-center pt-5 pb-5 h2">Similar Projects</h4>
