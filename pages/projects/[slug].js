@@ -42,7 +42,7 @@ const SingleProject = ({ project , query }) => {
         ));
     const showRelatedProject = () => {
         return related.map((project, i) => (
-            <div className="col-md-4" key={i}>
+            <div className="col-lg-3" key={i}>
                 <article>
                     <SmallCard project={project} />
                 </article>
