@@ -40,7 +40,7 @@ const Projects = ({projects, categories, tags, totalProjects, projectsLimit, pro
     const showAllProjects = () => {
         return projects.map((project, i) => {
             return (
-                <div className="col-lg-4" key={i}> 
+                <div className="col-lg-4 pro-card" key={i}> 
                     <Card project= {project} />
                     <hr />
                 </div>

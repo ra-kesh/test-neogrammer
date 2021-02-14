@@ -46,7 +46,7 @@ const Search = () => {
     const searchForm = () => (
         <form onSubmit={searchSubmit}>
             <div className="row">
-                <div className="col-lg-6">
+                <div className="col-lg-6 pl-0">
                     <input type="search" className="form-control" placeholder="Search project" onChange={handleChange} />
                 </div>
 
