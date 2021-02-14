@@ -11,7 +11,7 @@ const SmallCard = ({ project }) => {
                     <a>
                         <img
                             className="img img-fluid"
-                            style={{ height: '200px', width: '100%' }}
+                            style={{ height: '150px', width: '100%' }}
                             src={`${API}/project/photo/${project.slug}`}
                             alt={project.title}
                         />
@@ -27,13 +27,9 @@ const SmallCard = ({ project }) => {
                         </a>
                     </Link>
                 </section>
-            </div>
-
-            <div className="card-body">
-                By <h6><Link href={`/profile/${project.postedBy.username}`}>
+                <h6>by<Link href={`/profile/${project.postedBy.username}`}>
                                             <a>{project.postedBy.username}</a>
-                   </Link></h6> 
-                
+                </Link></h6>          
             </div>
         </div>
     );
