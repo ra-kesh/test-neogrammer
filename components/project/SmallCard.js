@@ -27,7 +27,7 @@ const SmallCard = ({ project }) => {
                         </a>
                     </Link>
                 </section>
-                <h6>by<Link href={`/profile/${project.postedBy.username}`}>
+                <h6>by <Link href={`/profile/${project.postedBy.username}`}>
                                             <a>{project.postedBy.username}</a>
                 </Link></h6>          
             </div>
