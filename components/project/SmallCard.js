@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import renderHTML from 'react-render-html';
-import moment from 'moment';
 import { API } from '../../config';
 
 const SmallCard = ({ project }) => {
@@ -11,7 +9,7 @@ const SmallCard = ({ project }) => {
                     <a>
                         <img
                             className="img img-fluid"
-                            style={{ height: '150px', width: '100%' }}
+                            style={{ height: '100px', width: '100%' }}
                             src={`${API}/project/photo/${project.slug}`}
                             alt={project.title}
                         />
@@ -27,9 +25,9 @@ const SmallCard = ({ project }) => {
                         </a>
                     </Link>
                 </section>
-                <h6>by <Link href={`/profile/${project.postedBy.username}`}>
+                {/* <h6>by <Link href={`/profile/${project.postedBy.username}`}>
                                             <a>{project.postedBy.username}</a>
-                </Link></h6>          
+                </Link></h6>           */}
             </div>
         </div>
     );
