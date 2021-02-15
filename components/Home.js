@@ -20,7 +20,7 @@ export default function Home() {
         </p> 
 
          <div className={styles.grid}>
-            <Link href="/categories/level-zero" key={i}>
+            <Link href="/categories/level-zero">
                 <a className={styles.card}>
                   <h3>Level Zero Projects &rarr;</h3>
                 </a>  
