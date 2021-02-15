@@ -77,10 +77,10 @@ const UserProfile = ({ user, projects, query }) => {
 
                 <br />
 
-                <div className="container mt-5">
+                <div className="container mt-7">
                     <div className="row pro-wrapper">
                         <div className="col-lg-12">
-                            <h2 className="card-title pt-5 text-center">
+                            <h2 className="card-title pb-5 text-center">
                                            List of  projects I have built ..
                             </h2>
                             <hr/>    
