@@ -51,7 +51,7 @@ const UserProfile = ({ user, projects, query }) => {
                         </div>
                 </header>
                 <div className="row pro-wrapper">
-                        <div className="col-lg-4 text-center">
+                        <div className="col-lg-4 text-center card">
                             <div >
                                 <img
                                     src={`${API}/user/photo/${user.username}`}
@@ -70,33 +70,13 @@ const UserProfile = ({ user, projects, query }) => {
                             <p className="text-muted">{user.about}</p>
                             </div>
                         </div>
-                        {/* <div className="card">
-                                <div className="card-body">
-                                    <div className="row">
-                                        <div className="col-md-8">
-                                            <h5>{user.name}</h5>
-                                          
-                                           
-
-
-                                        </div>
-                                        <div className="col-md-4">
-                                            <img
-                                                src={`${API}/user/photo/${user.username}`}
-                                                className="img img-fluid img-thumbnail mb-3"
-                                                style={{ maxHeight: '150px', maxWidth: '100%' }}
-                                                alt="user profile"
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> */}
+                       
                     </div>
                 </div>
 
                 <br />
 
-                <div className="container pb-5">
+                <div className="container pb-5 mt-5">
                     <div className="row pro-wrapper">
 
                         <div className="col-lg-10">
@@ -106,24 +86,14 @@ const UserProfile = ({ user, projects, query }) => {
                             <hr/>
                         </div>
 
-                        <div className="col-lg-8">
+                        <div className="col-lg-9">
                             
                             <div >
                             {showUserProjects()}
                             </div>
                         </div>
 
-                        {/* <div className="col-md-6">
-                            <div className="card">
-                                <div className="card-body">
-                                    <h5 className="card-title bg-primary pt-4 pb-4 pl-4 pr-4 text-light">
-                                        Message {user.name}
-                                    </h5>
-                                    <br />
-                                    <ContactForm authorEmail={user.email}/>
-                                </div>
-                            </div>
-                        </div> */}
+                       
                     </div>
                 </div>
             </Layout>
