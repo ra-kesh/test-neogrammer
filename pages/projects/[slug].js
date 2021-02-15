@@ -76,6 +76,7 @@ const SingleProject = ({ project , query }) => {
                                                 src={`${API}/project/photo/${project.slug}`}
                                                 alt={project.title}
                                                 className="img img-fluid featured-image"
+                                                style={{ height: '30vh', width: '100%' }}
                                             />   
                                         </div>
                                     
