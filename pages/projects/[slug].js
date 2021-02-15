@@ -123,52 +123,16 @@ const SingleProject = ({ project , query }) => {
 
                             </div>
                            
-                            <div className="container pb-5 pt-5">
+                            <div className="container pb-5 pt-10">
                                      {showComments()}
                             </div>
-                            {/* <section> 
-                                <div className="row" style={{ marginTop: '-30px' }}>
-                                    <img
-                                        src={`${API}/project/photo/${project.slug}`}
-                                        alt={project.title}
-                                        className="img img-fluid featured-image"
-                                    />
-                                </div>
-                            </section> */}
-                            {/* <section>
-                                <p className="lead mt-3 mark">
-                                Devloped by
-                                        <Link href={`/profile/${project.postedBy.username}`}>
-                                            <a>{project.postedBy.username}</a>
-                                        </Link>| Added {moment(project.updatedAt).fromNow()}
-                                </p>
-
-                                <div className="pb-3">
-                                    {showProjectCategories(project)}
-                                    {showProjectTags(project)}
-                                    <br />
-                                    <br />
-                                </div>
-                            </section> */}
+                          
                         </div>
-                        {/* <div className="container">
-                            <section>
-                                <div className="col-md-12 lead">{renderHTML(project.body)}</div>
-                            </section>
-                        </div> */}
+                     
 
                        
                     </article>
-                      {/* <div className="container">
-                            <h4 className="text-center pt-5 pb-5 h2">Similar Projects</h4>
-                            <hr />
-                            <div className="row">{showRelatedProject()}</div>
-
-                        </div> */}
-
-                        {/* <div className="container pb-5">
-                            {showComments()}
-                        </div> */}
+                    
                 </main>
             </Layout>
         </React.Fragment>
