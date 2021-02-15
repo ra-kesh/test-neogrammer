@@ -54,6 +54,7 @@ a:hover{
   border: 0;
   margin: 5rem 0;
   justify-content: center;
+  min-height: 50vh;
   }
 
   .login-modal{
@@ -71,7 +72,7 @@ a:hover{
     justify-content: center;
     display: flex;
     flex-direction: column;
-    min-height: 50vh;
+    
 
   }
 
