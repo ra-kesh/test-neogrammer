@@ -63,7 +63,7 @@ const SingleProject = ({ project }) => {
                         <div className="container-fluid ">
                             <header>
                                 <div className="div-project-header">
-                                    <h1 className="display-4 font-weight-bold">{project.name}</h1>
+                                    <h1 className="display-4 font-weight-bold">{project.title}</h1>
                                 
                                 </div>
                             </header>
