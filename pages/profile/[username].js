@@ -15,7 +15,7 @@ const UserProfile = ({ user, projects, query }) => {
                 <div className="mt-4 mb-4" key={i}>
 
                 <h6><Link href={`/projects/${project.slug}`}>
-                          <div className="card">
+                          <div className="card p-3">
                                 <div className="row">
                                         <div className="col-lg-2">
                                             <img
@@ -25,7 +25,7 @@ const UserProfile = ({ user, projects, query }) => {
                                                 style={{ height: '10vh', width: '100%' }}
                                             />   
                                         </div>
-                                        <div className="col-lg-5">
+                                        <div className="col-lg-5 ">
                                              <a className="">{project.title}</a>
                                        </div>
                                 </div>  
@@ -64,7 +64,7 @@ const UserProfile = ({ user, projects, query }) => {
                             <h4>Joined {moment(user.createdAt).fromNow()}</h4>
                             </div> 
                         </div>
-                        <div className="col-lg-6 div-user-details">
+                        <div className="col-lg-6 div-user-details pl-5">
                             <h4>Hello, my name is {user.name}</h4>
                             <div>
                             <p className="text-muted">{user.about}</p>
@@ -82,8 +82,8 @@ const UserProfile = ({ user, projects, query }) => {
                             <h2 className="card-title pt-4 pb-4 pl-4 pr-4 mt-5">
                                             projects I have built ..
                             </h2>
-                            <hr/>
-                        </div>                      
+                        </div>  
+                        <hr/>                    
                         <div className="col-lg-10">
                             
                             <div >
