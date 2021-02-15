@@ -42,7 +42,7 @@ const SingleProject = ({ project , query }) => {
         ));
     const showRelatedProject = () => {
         return related.map((project, i) => (
-            <div className="col-lg-12" key={i}>
+            <div className="col-lg-12 p-3" key={i}>
                 <article>
                     <SmallCard project={project} />
                 </article>
@@ -91,7 +91,7 @@ const SingleProject = ({ project , query }) => {
                                     <div>
 
 
-                                        <p className="lead mt-3 ">
+                                        <p className=" mt-3 ">
                                             Built by :
                                             <h4>  <Link href={`/profile/${project.postedBy.username}`}>
                                                 <a>{project.postedBy.username}</a>
@@ -100,12 +100,12 @@ const SingleProject = ({ project , query }) => {
                                         </div>
                                         <div className="pb-3">
 
-                                            <p className="lead mt-3 ">
+                                            <p className=" mt-3 ">
                                                 Built for :
                                                 <h4>{showProjectCategories(project)}</h4>       
                                             </p>
                                             
-                                            <p className="lead mt-3 ">
+                                            <p className=" mt-3 ">
                                                 Built using :
                                                 <h4>{showProjectTags(project)}</h4>       
                                             </p>
@@ -115,7 +115,7 @@ const SingleProject = ({ project , query }) => {
                                     <div className="container">
                                             <h4 className="text-center pt-5">Similar Projects</h4>
                                             <hr />
-                                            <div className="row">{showRelatedProject()}</div>
+                                            <div className="row">{showRelatedProject()} ,</div>
 
                                         </div>
                                     </div>
