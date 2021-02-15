@@ -1,4 +1,4 @@
-import Head from 'next/head';
+
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { useState , useEffect } from 'react';
@@ -62,6 +62,12 @@ const SingleProject = ({ project , query }) => {
                 <main>
                     <article>
                         <div className="container-fluid ">
+                            <header>
+                                <div className="div-project-header">
+                                    <h1 className="display-4 font-weight-bold">Project Details</h1>
+                                
+                                </div>
+                            </header>
                             <div className="row pro-wrapper">
                            
                                 <div className="col-lg-6">
