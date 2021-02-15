@@ -30,14 +30,14 @@ const SingleProject = ({ project , query }) => {
     const showProjectCategories = project =>
         project.categories.map((c, i) => (
             <Link key={i} href={`/categories/${c.slug}`}>
-                <a className="btn btn-primary mr-1 ml-1 mt-3">{c.name}</a>
+                <a className=" mr-1 ml-1 mt-3">{c.name}</a>
             </Link>
         ));
 
     const showProjectTags = project =>
         project.tags.map((t, i) => (
             <Link key={i} href={`/tags/${t.slug}`}>
-                <a className="btn btn-outline-primary mr-1 ml-1 mt-3">{t.name}</a>
+                <a className=" mr-1 ml-1 mt-3">{t.name}</a>
             </Link>
         ));
     const showRelatedProject = () => {
@@ -89,18 +89,27 @@ const SingleProject = ({ project , query }) => {
                                     <div className="col-lg-3 ">
 
                                     <div>
-                                            <p className="lead mt-3 mark">
-                                            Devloped by
-                                            <Link href={`/profile/${project.postedBy.username}`}>
+
+
+                                        <p className="lead mt-3 ">
+                                            Built by :
+                                            <h4>  <Link href={`/profile/${project.postedBy.username}`}>
                                                 <a>{project.postedBy.username}</a>
-                                            </Link>| Added {moment(project.updatedAt).fromNow()}
+                                            </Link>| Added {moment(project.updatedAt).fromNow()}</h4>       
                                         </p>
                                         </div>
                                         <div className="pb-3">
-                                            {showProjectCategories(project)}
-                                            {showProjectTags(project)}
-                                            <br />
-                                            <br />
+
+                                            <p className="lead mt-3 ">
+                                                Built for :
+                                                <h4>{showProjectCategories(project)}</h4>       
+                                            </p>
+                                            
+                                            <p className="lead mt-3 ">
+                                                Built using :
+                                                <h4>{showProjectTags(project)}</h4>       
+                                            </p>
+
                                         </div>
                                     
                                     <div className="container">
