@@ -37,7 +37,7 @@ const SingleProject = ({ project , query }) => {
     const showProjectTags = project =>
         project.tags.map((t, i) => (
             <Link key={i} href={`/tags/${t.slug}`}>
-                <a className=" mr-1 ml-1 mt-3">{t.name}</a>
+                <a className=" mr-1 ml-1 mt-3">{t.name} ,</a>
             </Link>
         ));
     const showRelatedProject = () => {
@@ -115,7 +115,7 @@ const SingleProject = ({ project , query }) => {
                                     <div className="container">
                                             <h4 className="text-center pt-5">Similar Projects</h4>
                                             <hr />
-                                            <div className="row">{showRelatedProject()} ,</div>
+                                            <div className="row">{showRelatedProject()}</div>
 
                                         </div>
                                     </div>
@@ -123,7 +123,7 @@ const SingleProject = ({ project , query }) => {
 
                             </div>
                            
-                            <div className="container pb-5">
+                            <div className="container pb-5 pt-5">
                                      {showComments()}
                             </div>
                             {/* <section> 
