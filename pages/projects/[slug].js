@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { useState , useEffect } from 'react';
 import { singleProject , listRelated } from '../../actions/project';
-import { API, DOMAIN, APP_NAME, FB_APP_ID } from '../../config';
+import { API } from '../../config';
 import renderHTML from 'react-render-html';
 import moment from 'moment';
 import SmallCard from '../../components/project/SmallCard';
