@@ -80,13 +80,13 @@ const UserProfile = ({ user, projects, query }) => {
                 <div className="container mt-5">
                     <div className="row pro-wrapper">
                         <div className="col-lg-12">
-                            <h2 className="card-title mt-5 text-center">
+                            <h2 className="card-title pt-5 text-center">
                                            List of  projects I have built ..
                             </h2>
                             <hr/>    
                         </div> 
                                         
-                        <div className="col-lg-10 pb-5">
+                        <div className="col-lg-10 pt-5">
                             
                             <div >
                             {showUserProjects()}
