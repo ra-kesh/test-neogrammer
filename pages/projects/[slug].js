@@ -123,7 +123,7 @@ const SingleProject = ({ project , query }) => {
 
                             </div>
                            
-                            <div className="container pb-5 pt-10">
+                            <div className="container pb-5 mt-5">
                                      {showComments()}
                             </div>
                           
