@@ -50,8 +50,8 @@ const UserProfile = ({ user, projects, query }) => {
                         
                         </div>
                 </header>
-                <div className="row pro-wrapper card">
-                        <div className="col-lg-4 text-center ">
+                <div className="row pro-wrapper ">
+                        <div className="col-lg-4 text-center card">
                             <div >
                                 <img
                                     src={`${API}/user/photo/${user.username}`}
@@ -78,11 +78,12 @@ const UserProfile = ({ user, projects, query }) => {
 
                 <div className="container pb-5 mt-5">
                     <div className="row pro-wrapper">
-
-                        <h2 className="card-title pt-4 pb-4 pl-4 pr-4 ">
-                                         projects I have built ..
-                        </h2>
-                        <hr/>
+                        <div>
+                            <h2 className="card-title pt-4 pb-4 pl-4 pr-4 mt-5">
+                                            projects I have built ..
+                            </h2>
+                            <hr/>
+                        </div>                      
                         <div className="col-lg-10">
                             
                             <div >
