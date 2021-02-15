@@ -9,6 +9,15 @@ export default function Home() {
       <Head>
         <title>Neog Build | Home</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://test-neogrammer.ra-kesh.vercel.app/"/>
+        <meta name="description" content="Projects Built by neogrammers for the rest of the world"></meta>
+        <meta property="og:site_name" content="Build Neog"/>
+        <meta property="twitter:site" content="@neogcamp"/>
+       <meta property="twitter:site:id" content="@neogcamp" />
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:creator" content="@ra_keshh"/>
+       <meta property="twitter:creator:id" content="@ra_keshh"/>
       </Head>
 
       <main className={styles.main}>
@@ -75,3 +84,4 @@ export default function Home() {
     </div>
   )
 }
+
