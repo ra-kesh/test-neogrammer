@@ -25,7 +25,7 @@ const UserProfile = ({ user, projects, query }) => {
                                                 style={{ height: '10vh', width: '100%' }}
                                             />   
                                         </div>
-                                        <div className="col-lg-5 text-center">
+                                        <div className="col-lg-5 div-user-list">
                                           <h5> <a className="">{project.title}</a></h5>
                                              
                                        </div>
@@ -79,12 +79,13 @@ const UserProfile = ({ user, projects, query }) => {
 
                 <div className="container pb-5 mt-5">
                     <div className="row pro-wrapper">
-                        <div>
-                            <h2 className="card-title pt-4 pb-4 pl-4 pr-4 mt-5">
+                        <div className="col-lg-10">
+                            <h2 className="card-title mt-5 text-center">
                                             projects I have built ..
                             </h2>
+                            <hr/>    
                         </div>  
-                        <hr/>                    
+                                        
                         <div className="col-lg-10">
                             
                             <div >

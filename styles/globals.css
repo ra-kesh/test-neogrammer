@@ -340,6 +340,13 @@ a:hover{
     align-items: flex-start;
   }
 
+  .div-user-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
 /* 
 
 
