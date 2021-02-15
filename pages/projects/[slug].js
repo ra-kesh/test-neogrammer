@@ -5,11 +5,10 @@ import { useState , useEffect } from 'react';
 import { singleProject , listRelated } from '../../actions/project';
 import { API } from '../../config';
 import renderHTML from 'react-render-html';
-import moment from 'moment';
 import SmallCard from '../../components/project/SmallCard';
 import DisqusThread from '../../components/DisqusThread';
 
-const SingleProject = ({ project , query }) => {
+const SingleProject = ({ project }) => {
 
     const [related, setRelated] = useState([]);
 
@@ -64,14 +63,14 @@ const SingleProject = ({ project , query }) => {
                         <div className="container-fluid ">
                             <header>
                                 <div className="div-project-header">
-                                    <h1 className="display-4 font-weight-bold">Project Details</h1>
+                                    <h1 className="display-4 font-weight-bold">{project.name}</h1>
                                 
                                 </div>
                             </header>
                             <div className="row pro-wrapper">
                            
                                 <div className="col-lg-6">
-                                        <div className="card p-3">
+                                        <div className="card p-2">
                                             <img
                                                 src={`${API}/project/photo/${project.slug}`}
                                                 alt={project.title}
