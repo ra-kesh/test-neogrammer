@@ -79,9 +79,9 @@ const UserProfile = ({ user, projects, query }) => {
 
                 <div className="container pb-5 mt-5">
                     <div className="row pro-wrapper">
-                        <div className="col-lg-10">
-                            <h2 className="card-title mt-5 text-center">
-                                            projects I have built ..
+                        <div className="col-lg-12">
+                            <h2 className="card-title mt-5 text-center pb-5">
+                                           List of  projects I have built ..
                             </h2>
                             <hr/>    
                         </div>  
