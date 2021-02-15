@@ -16,9 +16,20 @@ const UserProfile = ({ user, projects, query }) => {
 
                 <h6><Link href={`/projects/${project.slug}`}>
                           <div className="card">
-                                <div className="card-body">
-                                    <a className="">{project.title}</a>
-                                </div>
+                                <div className="row">
+                                        <div className="col-lg-3">
+                                            <img
+                                                src={`${API}/project/photo/${project.slug}`}
+                                                alt={project.title}
+                                                className="img img-fluid featured-image"
+                                                style={{ height: '10vh', width: '100%' }}
+                                            />   
+                                        </div>
+                                        <div className="col-lg-7">
+                                             <a className="">{project.title}</a>
+                                       </div>
+                                </div>  
+                               
                             </div>
                         
                     </Link></h6>
@@ -32,7 +43,13 @@ const UserProfile = ({ user, projects, query }) => {
         <React.Fragment>
             {/* {head()} */}
             <Layout>
-                <div className="container">
+                <div className="container-fluid">
+                <header>
+                        <div className="div-project-header">
+                            <h1 className="display-4 font-weight-bold">NeoGrammer Detail</h1>
+                        
+                        </div>
+                </header>
                 <div className="row pro-wrapper">
                         <div className="col-lg-4">
                             <div >
@@ -82,9 +99,9 @@ const UserProfile = ({ user, projects, query }) => {
                 <div className="container pb-5">
                     <div className="row pro-wrapper">
                         <div className="col-lg-10">
-                             <h5 className="card-title pt-4 pb-4 pl-4 pr-4 ">
-                                        All the projects built by {user.name}
-                             </h5>
+                             <h4 className="card-title pt-4 pb-4 pl-4 pr-4 ">
+                                        List of projects built by {user.name}
+                             </h4>
                             <div >
                             {showUserProjects()}
                             </div>
