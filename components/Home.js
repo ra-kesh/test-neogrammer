@@ -36,12 +36,6 @@ export default function Home() {
                    <h3>Level One Projects &rarr;</h3>
                 </a>  
             </Link>
-            <Link href="/categories/level-one">
-                <a href="" className={styles.card}>
-                   <h3>Level One Projects &rarr;</h3>
-                </a>  
-            </Link>
-
 
             {!isAuth() && (
               <Link href="/signin">
