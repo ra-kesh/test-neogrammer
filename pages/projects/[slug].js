@@ -71,7 +71,7 @@ const SingleProject = ({ project , query }) => {
                             <div className="row pro-wrapper">
                            
                                 <div className="col-lg-6">
-                                        <div className="card">
+                                        <div className="card p-3">
                                             <img
                                                 src={`${API}/project/photo/${project.slug}`}
                                                 alt={project.title}
