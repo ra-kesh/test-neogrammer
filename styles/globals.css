@@ -57,22 +57,22 @@ a:hover{
   }
 
   .login-modal{
-color: black;
-text-align: center;
-box-sizing: border-box;
-padding: 0;
-margin: 0;
-font: inherit;
-font-size: 100%;
-border: 0;
-position: relative;
-/* display: inline-block; */
-/* vertical-align: top; */
-background: var(--primary-white);
-box-shadow: 2px 2px 6px 0 rgba(41,70,97,.1);
-justify-content: center;
-display: flex;
-flex-direction: column;
+    color: black;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    font-size: 100%;
+    border: 0;
+    position: relative;
+    background: var(--primary-white);
+    box-shadow: 2px 2px 6px 0 rgba(41,70,97,.1);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+
   }
 
   .login-form{
