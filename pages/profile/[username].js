@@ -15,7 +15,7 @@ const UserProfile = ({ user, projects, query }) => {
                 <div className="mt-4 mb-4" key={i}>
 
                 <h6><Link href={`/projects/${project.slug}`}>
-                          <div className="card p-3">
+                          <div className="card p-1">
                                 <div className="row">
                                         <div className="col-lg-2">
                                             <img
@@ -25,8 +25,9 @@ const UserProfile = ({ user, projects, query }) => {
                                                 style={{ height: '10vh', width: '100%' }}
                                             />   
                                         </div>
-                                        <div className="col-lg-5 ">
-                                             <a className="">{project.title}</a>
+                                        <div className="col-lg-5 text-center">
+                                          <h5> <a className="">{project.title}</a></h5>
+                                             
                                        </div>
                                 </div>  
                                
