@@ -9,7 +9,7 @@ const SmallCard = ({ project }) => {
                     <a>
                         <img
                             className="img img-fluid"
-                            style={{ height: '100px', width: '100%' }}
+                            style={{ height: '150px', width: '100%' }}
                             src={`${API}/project/photo/${project.slug}`}
                             alt={project.title}
                         />
@@ -21,7 +21,7 @@ const SmallCard = ({ project }) => {
                 <section>
                     <Link href={`/projects/${project.slug}`}>
                         <a>
-                            <h4 className="card-title">{project.title}</h4>
+                            <h5 className="card-title">{project.title}</h5>
                         </a>
                     </Link>
                 </section>

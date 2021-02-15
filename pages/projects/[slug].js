@@ -104,7 +104,7 @@ const SingleProject = ({ project , query }) => {
                                         </div>
                                     
                                     <div className="container">
-                                            <h4 className="text-center pt-5 pb-5 h2">Similar Projects</h4>
+                                            <h4 className="text-center pt-5">Similar Projects</h4>
                                             <hr />
                                             <div className="row">{showRelatedProject()}</div>
 
