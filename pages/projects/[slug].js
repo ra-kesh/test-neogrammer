@@ -95,7 +95,7 @@ const SingleProject = ({ project , query }) => {
                                             Built by :
                                             <h4>  <Link href={`/profile/${project.postedBy.username}`}>
                                                 <a>{project.postedBy.username}</a>
-                                            </Link>| Added {moment(project.updatedAt).fromNow()}</h4>       
+                                            </Link></h4>       
                                         </p>
                                         </div>
                                         <div className="pb-3">
