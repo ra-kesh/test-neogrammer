@@ -1,11 +1,11 @@
-import Head from 'next/head';
+// import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { userPublicProfile } from '../../actions/user';
 import { API, DOMAIN, APP_NAME, FB_APP_ID } from '../../config';
 import moment from 'moment';
-import ContactForm from '../../components/form/ContactForm';
-import { useRouter } from 'next/router';
+// import ContactForm from '../../components/form/ContactForm';
+// import { useRouter } from 'next/router';
 
 const UserProfile = ({ user, projects, query }) => {
 
@@ -17,7 +17,7 @@ const UserProfile = ({ user, projects, query }) => {
                 <h6><Link href={`/projects/${project.slug}`}>
                           <div className="card">
                                 <div className="row">
-                                        <div className="col-lg-3">
+                                        <div className="col-lg-2">
                                             <img
                                                 src={`${API}/project/photo/${project.slug}`}
                                                 alt={project.title}
@@ -25,7 +25,7 @@ const UserProfile = ({ user, projects, query }) => {
                                                 style={{ height: '10vh', width: '100%' }}
                                             />   
                                         </div>
-                                        <div className="col-lg-7">
+                                        <div className="col-lg-5">
                                              <a className="">{project.title}</a>
                                        </div>
                                 </div>  
@@ -51,7 +51,7 @@ const UserProfile = ({ user, projects, query }) => {
                         </div>
                 </header>
                 <div className="row pro-wrapper">
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 text-center">
                             <div >
                                 <img
                                     src={`${API}/user/photo/${user.username}`}
@@ -61,10 +61,10 @@ const UserProfile = ({ user, projects, query }) => {
                                 />
                             </div>
                             <div>
-                            <p className="text-muted">Joined {moment(user.createdAt).fromNow()}</p>
+                            <h4>Joined {moment(user.createdAt).fromNow()}</h4>
                             </div> 
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 div-user-details">
                             <h4>{user.name}</h4>
                             <div>
                             <p className="text-muted">{user.about}</p>
@@ -98,10 +98,16 @@ const UserProfile = ({ user, projects, query }) => {
 
                 <div className="container pb-5">
                     <div className="row pro-wrapper">
+
                         <div className="col-lg-10">
-                             <h4 className="card-title pt-4 pb-4 pl-4 pr-4 ">
+                           <h2 className="card-title pt-4 pb-4 pl-4 pr-4 ">
                                         List of projects built by {user.name}
-                             </h4>
+                             </h2>
+                            <hr/>
+                        </div>
+
+                        <div className="col-lg-8">
+                            
                             <div >
                             {showUserProjects()}
                             </div>
