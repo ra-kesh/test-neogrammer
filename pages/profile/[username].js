@@ -15,7 +15,12 @@ const UserProfile = ({ user, projects, query }) => {
                 <div className="mt-4 mb-4" key={i}>
 
                 <h6><Link href={`/projects/${project.slug}`}>
-                        <a className="lead">{project.title}</a>
+                          <div className="card">
+                                <div className="card-body">
+                                    <a className="">{project.title}</a>
+                                </div>
+                            </div>
+                        
                     </Link></h6>
                     
                 </div>
@@ -76,15 +81,12 @@ const UserProfile = ({ user, projects, query }) => {
 
                 <div className="container pb-5">
                     <div className="row pro-wrapper">
-                        <div className="col-lg-8">
-                            <div className="card">
-                                <div className="card-body">
-                                    <h5 className="card-title bg-primary pt-4 pb-4 pl-4 pr-4 ">
+                        <div className="col-lg-10">
+                             <h5 className="card-title pt-4 pb-4 pl-4 pr-4 ">
                                         All the projects built by {user.name}
-                                    </h5>
-
-                                    {showUserProjects()}
-                                </div>
+                             </h5>
+                            <div >
+                            {showUserProjects()}
                             </div>
                         </div>
 
