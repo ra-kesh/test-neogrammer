@@ -33,6 +33,9 @@ const UserProfile = ({ user, projects, query }) => {
                                         <div className="col-md-8">
                                             <h5>{user.name}</h5>
                                             <p className="text-muted">Joined {moment(user.createdAt).fromNow()}</p>
+                                            <p className="text-muted">{user.about}</p>
+
+
                                         </div>
                                         <div className="col-md-4">
                                             <img

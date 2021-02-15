@@ -186,7 +186,7 @@ const CreateProject = ({ router }) => {
                      modules={QuillModules}
                      formats={QuillFormats}
                     value={body} 
-                    placeholder="Describe your Project However you want.." 
+                    placeholder="Provide your project links and a brief description about it" 
                     onChange={handleBody} 
                     />
                 </div>

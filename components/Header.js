@@ -43,7 +43,7 @@ const Header = () => {
               <>
                 <NavItem>
                   <Link href="/projects">
-                    <NavLink><code className={styles.code}>Projects</code></NavLink>
+                    <NavLink><code className={styles.code}>All Projects</code></NavLink>
                   </Link>
                 </NavItem>
               </>
