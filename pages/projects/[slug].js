@@ -81,7 +81,7 @@ const SingleProject = ({ project , query }) => {
                                     
 
                                         <section>
-                                        <div className="col-md-12 lead pro-desc">{renderHTML(project.body)}</div>
+                                        <div className=" pro-desc">{renderHTML(project.body)}</div>
                                     </section>
                                     
                                     </div>
